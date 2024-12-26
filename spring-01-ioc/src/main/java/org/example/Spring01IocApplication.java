@@ -5,7 +5,6 @@ import org.example.bean.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 import java.util.Map;
 
@@ -15,6 +14,15 @@ import java.util.Map;
 @SpringBootApplication
 public class Spring01IocApplication
 {
+
+    /**
+     * Spring提供了快速的Mvc分层注解
+     * 1、 @Controller 控制器
+     * 2、 @Service 服务层
+     * 3、 @Repository 持久层
+     * 4、 @Component 组件
+     *
+     */
 
     /**
      * 组件：框架的底层配置
