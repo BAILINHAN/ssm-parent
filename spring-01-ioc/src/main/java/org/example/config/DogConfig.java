@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Lazy;
  * 2、@Component 等分层注解
  * 3、@Import：快速导入组件
  */
-//@Configuration
+@Configuration
 public class DogConfig {
 
 

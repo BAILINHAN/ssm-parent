@@ -2,6 +2,7 @@ package org.example.bean;
 
 
 import lombok.Data;
+import org.example.annotation.UUID;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -17,6 +18,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class Cat {
 
+    @UUID
+    private String id;
     @Value("${cat.name:Tom}") // : 后面是取不到的时候的默认值；
     private String name;
     @Value("${cat.age:20}")

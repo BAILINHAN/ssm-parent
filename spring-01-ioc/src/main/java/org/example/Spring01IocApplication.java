@@ -2,10 +2,7 @@ package org.example;
 
 import ch.qos.logback.core.CoreConstants;
 
-import org.example.bean.Car;
-import org.example.bean.Cat;
-import org.example.bean.Dog;
-import org.example.bean.Person;
+import org.example.bean.*;
 import org.example.controller.UserController;
 import org.example.dao.DeliveryDao;
 import org.example.dao.UserDao;
@@ -14,6 +11,8 @@ import org.example.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.util.ResourceUtils;
 
@@ -34,7 +33,52 @@ import java.util.Map;
 public class Spring01IocApplication {
 
 
+    /**
+     * 测试生命周期
+     * @param args
+     */
     public static void main(String[] args) {
+
+        ConfigurableApplicationContext ioc = SpringApplication.run(Spring01IocApplication.class, args);
+        System.out.println("=============== Ioc容器创建完成 ==================");
+
+        User userBean = ioc.getBean(User.class);
+        System.out.println("运行：" + userBean);
+
+        Car car123 = new Car();
+        System.out.println(car123);
+
+        Map<String, Cat> beansOfCat = ioc.getBeansOfType(Cat.class);
+        System.out.println(beansOfCat);
+
+        Cat newCat = new Cat();
+        System.out.println("newCat == " + newCat);
+    }
+
+    /**
+     * 原生方式创建、使用spring容器
+     * @param args
+     */
+    public static void test13(String[] args) {
+
+        // 1. 自己创建一个Ioc容器 在类路径下找配置
+        ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("classpath:ioc.xml");
+
+        // 在文件系统中，其他盘中找配置
+        new FileSystemXmlApplicationContext();
+
+        // 2. 底层组件
+        for(String definitionName : ioc.getBeanDefinitionNames()){
+
+            System.out.println("definitionName = " + definitionName);
+        }
+
+        // 3. 获取组件
+        Map<String, Person> beansOfType = ioc.getBeansOfType(Person.class);
+        System.out.println("type = " + beansOfType);
+    }
+
+    public static void test12(String[] args) {
         ConfigurableApplicationContext ioc = SpringApplication.run(Spring01IocApplication.class, args);
         System.out.println("=================ioc容器创建完成===================");
 
