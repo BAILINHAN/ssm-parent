@@ -23,8 +23,9 @@ public class UUIDBeanPostProcessor implements BeanPostProcessor {
         // 扫描属性头上所有的注解
         for(Field declaredField : declaredFields) {
 
-            // 判断是否有@UUID的注解
-            if(declaredField.isAnnotationPresent(UUID.class)){
+            // 判断是否有@UUID的注解 并且是String类型
+            if(declaredField.isAnnotationPresent(UUID.class)
+                && declaredField.getType().equals(String.class)){
 
                 declaredField.setAccessible(true);
                 // 设置一个UUID给对应的属性
