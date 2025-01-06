@@ -1,6 +1,6 @@
 package com.atguigu.spring.aop.proxy.statics;
 
-import com.atguigu.spring.aop.calculator.MathCalculator;
+import com.atguigu.cloud.calculator.MathCalculator;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 

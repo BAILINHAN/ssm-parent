@@ -1,4 +1,4 @@
-package com.atguigu.spring.aop.proxy.dynamic;
+package com.atguigu.cloud.proxy.dynamic;
 
 import com.atguigu.spring.aop.log.LogUtils;
 

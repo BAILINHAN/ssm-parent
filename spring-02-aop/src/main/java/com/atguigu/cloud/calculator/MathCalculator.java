@@ -1,4 +1,4 @@
-package com.atguigu.spring.aop.calculator;
+package com.atguigu.cloud.calculator;
 
 public interface MathCalculator {
 

@@ -53,6 +53,7 @@ public class Spring01IocApplication {
 
         Cat newCat = new Cat();
         System.out.println("newCat == " + newCat);
+
     }
 
     /**

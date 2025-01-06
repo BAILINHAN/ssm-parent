@@ -1,6 +1,5 @@
-package com.atguigu.spring.aop.calculator.impl;
-
-import com.atguigu.spring.aop.calculator.MathCalculator;
+package com.atguigu.cloud.calculator.impl;
+import com.atguigu.cloud.calculator.MathCalculator;
 import org.springframework.stereotype.Component;
 
 
