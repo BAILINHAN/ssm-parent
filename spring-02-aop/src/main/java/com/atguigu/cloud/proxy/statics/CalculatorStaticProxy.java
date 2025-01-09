@@ -1,4 +1,4 @@
-package com.atguigu.spring.aop.proxy.statics;
+package com.atguigu.cloud.proxy.statics;
 
 import com.atguigu.cloud.calculator.MathCalculator;
 import lombok.Data;
@@ -28,9 +28,9 @@ public class CalculatorStaticProxy implements MathCalculator {
 
     @Override
     public int add(int i, int j) {
-        System.out.println("【日志】add 开始：参数："+i+","+j);
+//        System.out.println("【日志】add 开始：参数："+i+","+j);
         int result = target.add(i, j);
-        System.out.println("【日志】add 返回：结果："+result);
+//        System.out.println("【日志】add 返回：结果："+result);
         return result;
     }
 

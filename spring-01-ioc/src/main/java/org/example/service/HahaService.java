@@ -32,4 +32,8 @@ public class HahaService implements EnvironmentAware, BeanNameAware {
     public void setBeanName(String name) {
         this.myName = name;
     }
+
+    public String getMyName() {
+        return myName;
+    }
 }

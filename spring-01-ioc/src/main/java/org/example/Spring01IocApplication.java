@@ -42,9 +42,6 @@ public class Spring01IocApplication {
         ConfigurableApplicationContext ioc = SpringApplication.run(Spring01IocApplication.class, args);
         System.out.println("=============== Ioc容器创建完成 ==================");
 
-        User userBean = ioc.getBean(User.class);
-        System.out.println("运行：" + userBean);
-
         Car car123 = new Car();
         System.out.println(car123);
 
@@ -53,6 +50,11 @@ public class Spring01IocApplication {
 
         Cat newCat = new Cat();
         System.out.println("newCat == " + newCat);
+
+        // 4.
+        Object zhangsan = ioc.getBean("zhangsan");
+        User userBean = ioc.getBean(User.class);
+        System.out.println("运行：" + userBean);
 
     }
 

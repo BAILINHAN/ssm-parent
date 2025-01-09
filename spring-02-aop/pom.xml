@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.atguigu</groupId>
-    <artifactId>spring-01-ioc</artifactId>
+    <artifactId>spring-02-aop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-01-ioc</name>
-    <description>spring-01-ioc</description>
+    <name>spring-02-aop</name>
+    <description>spring-02-aop</description>
     <url/>
     <licenses>
         <license/>
@@ -43,6 +43,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
 

@@ -1,6 +1,7 @@
 package com.atguigu.cloud.proxy.dynamic;
 
-import com.atguigu.spring.aop.log.LogUtils;
+
+import com.atguigu.cloud.log.LogUtils;
 
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
